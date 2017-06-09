@@ -21,7 +21,7 @@ public class ShoppingBasketTest {
 
     @Test
     public void isBasketEmptyTest() {
-        assertEquals((int) 0, shoppingBasket.countItems());
+        assertEquals(0, shoppingBasket.countItems());
     }
 
 
