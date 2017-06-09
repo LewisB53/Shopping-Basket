@@ -5,4 +5,8 @@ package com.codeclan.user.shoppingbasket;
  */
 
 class ShoppingBasket {
+
+    public int countItems() {
+        return 0;
+    }
 }
