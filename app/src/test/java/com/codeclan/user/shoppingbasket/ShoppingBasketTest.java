@@ -3,6 +3,8 @@ package com.codeclan.user.shoppingbasket;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertEquals;
+
 
 /**
  * Created by user on 09/06/2017.
@@ -16,5 +18,12 @@ public class ShoppingBasketTest {
     public void before() {
         shoppingBasket = new ShoppingBasket();
     }
+
+    @Test
+    public void isBasketEmptyTest() {
+        assertEquals((int) 0, shoppingBasket.countItems());
+    }
+
+
 
 }
