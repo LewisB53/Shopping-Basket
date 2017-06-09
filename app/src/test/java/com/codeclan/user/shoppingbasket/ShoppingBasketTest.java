@@ -13,10 +13,12 @@ import static junit.framework.Assert.assertEquals;
 public class ShoppingBasketTest {
 
     ShoppingBasket shoppingBasket;
+    Item item;
 
     @Before
     public void before() {
         shoppingBasket = new ShoppingBasket();
+        item = new Item();
     }
 
     @Test
@@ -24,6 +26,11 @@ public class ShoppingBasketTest {
         assertEquals(0, shoppingBasket.countItems());
     }
 
+    @Test
+    public void canAddItemToBasketTest() {
+        shoppingBasket.addItem(item);
+        assertEquals(1, shoppingBasket.countItems());
+    }
 
 
 }

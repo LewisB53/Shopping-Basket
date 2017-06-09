@@ -14,4 +14,8 @@ class ShoppingBasket {
         listOfItems = new ArrayList<>();
         return this.listOfItems.size();
     }
+
+    public void addItem(Item item) {
+        this.listOfItems.add(item);
+    }
 }
