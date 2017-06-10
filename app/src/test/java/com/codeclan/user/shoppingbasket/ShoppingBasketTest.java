@@ -39,5 +39,13 @@ public class ShoppingBasketTest {
         assertEquals(0, shoppingBasket.countItems());
     }
 
+    @Test
+    public void canClearAllItemsTest() {
+        shoppingBasket.addItem(item);
+        shoppingBasket.clearAllItems();
+        assertEquals(0, shoppingBasket.countItems());
+    }
+
+
 
 }
