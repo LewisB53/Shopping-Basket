@@ -32,5 +32,12 @@ public class ShoppingBasketTest {
         assertEquals(1, shoppingBasket.countItems());
     }
 
+    @Test
+    public void canRemoveItemFromBasketTest() {
+        shoppingBasket.addItem(item);
+        shoppingBasket.removeItem(item);
+        assertEquals(0, shoppingBasket.countItems());
+    }
+
 
 }

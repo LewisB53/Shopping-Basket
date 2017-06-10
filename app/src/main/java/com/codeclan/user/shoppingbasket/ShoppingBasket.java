@@ -8,14 +8,18 @@ import java.util.ArrayList;
  */
 
 class ShoppingBasket {
-    private ArrayList<Item> listOfItems;
+    private ArrayList<Item> listOfItems = new ArrayList<>();
+
 
     public int countItems() {
-        listOfItems = new ArrayList<>();
         return this.listOfItems.size();
     }
 
     public void addItem(Item item) {
         this.listOfItems.add(item);
+    }
+
+    public void removeItem(Item item) {
+        this.listOfItems.remove(item);
     }
 }
