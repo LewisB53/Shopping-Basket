@@ -36,7 +36,7 @@ public class DiscountsTest {
         shoppingBasket.addItem(item1);
         shoppingBasket.addItem(item2);
         double beforeDiscount = shoppingBasket.getTotalValue();
-        assertEquals(26.10, Discount.LoyaltyCardUsed(beforeDiscount));
+        assertEquals(28.419999999999998, Discount.LoyaltyCardUsed(beforeDiscount));
     }
 
 }

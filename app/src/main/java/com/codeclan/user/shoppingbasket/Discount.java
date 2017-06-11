@@ -16,10 +16,7 @@ class Discount {
     }
 
     public static double LoyaltyCardUsed(double beforeDiscount) {
-        if (Customer.loyaltyCardHolder = true)
-        {double discountedPrice = beforeDiscount * 0.98;
-            return discountedPrice;}
-        else
-            return beforeDiscount;
+        double discountedPrice = beforeDiscount * 0.98;
+            return discountedPrice;
     }
 }
