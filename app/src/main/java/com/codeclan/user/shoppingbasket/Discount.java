@@ -8,6 +8,18 @@ class Discount {
 
 
     public static double overTwentyPoundsDiscount(double beforeDiscount) {
-        return beforeDiscount * 0.9;
+        if (beforeDiscount > 20.00)
+        {double discountedPrice = beforeDiscount * 0.9;
+        return discountedPrice;}
+        else
+        return beforeDiscount;
+    }
+
+    public static double LoyaltyCardUsed(double beforeDiscount) {
+        if (Customer.loyaltyCardHolder = true)
+        {double discountedPrice = beforeDiscount * 0.98;
+            return discountedPrice;}
+        else
+            return beforeDiscount;
     }
 }

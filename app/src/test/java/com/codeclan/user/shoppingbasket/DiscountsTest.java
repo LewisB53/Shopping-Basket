@@ -24,10 +24,19 @@ public class DiscountsTest {
     }
 
     @Test
-    public void canApplyDiscountTest() {
+    public void canApplyOver20DiscountTest() {
         shoppingBasket.addItem(item1);
         shoppingBasket.addItem(item2);
         double beforeDiscount = shoppingBasket.getTotalValue();
         assertEquals(26.10, Discount.overTwentyPoundsDiscount(beforeDiscount));
     }
+
+    @Test
+    public void loyaltyCardUsedTest() {
+        shoppingBasket.addItem(item1);
+        shoppingBasket.addItem(item2);
+        double beforeDiscount = shoppingBasket.getTotalValue();
+        assertEquals(26.10, Discount.LoyaltyCardUsed(beforeDiscount));
+    }
+
 }
