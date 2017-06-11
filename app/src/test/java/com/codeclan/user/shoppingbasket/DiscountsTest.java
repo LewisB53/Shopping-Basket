@@ -14,12 +14,14 @@ public class DiscountsTest {
     ShoppingBasket shoppingBasket;
     Item item1;
     Item item2;
+    Customer customer1;
 
     @Before
     public void before() {
         shoppingBasket = new ShoppingBasket();
         item1 = new Item(10.50);
         item2 = new Item(18.50);
+        customer1 = new Customer(true);
 
     }
 
@@ -36,7 +38,7 @@ public class DiscountsTest {
         shoppingBasket.addItem(item1);
         shoppingBasket.addItem(item2);
         double beforeDiscount = shoppingBasket.getTotalValue();
-        assertEquals(28.419999999999998, Discount.LoyaltyCardUsed(beforeDiscount));
+        assertEquals(28.419999999999998, Discount.LoyaltyCardUsed(beforeDiscount,customer1));
     }
 
 }

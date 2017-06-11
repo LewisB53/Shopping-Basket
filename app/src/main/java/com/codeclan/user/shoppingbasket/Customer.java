@@ -12,8 +12,8 @@ class Customer {
         this.loyaltyCard = loyaltyCard;
     }
 
-    public static boolean loyaltyCardHolder() {
-        return true;
-
+    public boolean loyaltyCardHolder() {
+        return loyaltyCard;
     }
+
 }
