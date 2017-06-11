@@ -57,4 +57,21 @@ public class DiscountsTest {
         assertEquals(37.00, Discount.bogof(beforeDiscount,listOfItems));
     }
 
+    @Test
+    public void allDiscounts() {
+        shoppingBasket.addItem(item2);
+        shoppingBasket.addItem(item2);
+        shoppingBasket.addItem(item2);
+        listOfItems.add(item2);
+        listOfItems.add(item2);
+        listOfItems.add(item2);
+
+        double beforeDiscount = shoppingBasket.getTotalValue();
+
+        double newPrice = Discount.bogof(beforeDiscount,listOfItems);
+        double newPrice2 = Discount.overTwentyPoundsDiscount(newPrice);
+
+        assertEquals(32.634, Discount.LoyaltyCardUsed(newPrice2,customer1));
+    }
+
 }
