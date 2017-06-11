@@ -3,6 +3,8 @@ package com.codeclan.user.shoppingbasket;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static junit.framework.Assert.assertEquals;
 
 /**
@@ -15,6 +17,7 @@ public class DiscountsTest {
     Item item1;
     Item item2;
     Customer customer1;
+    ArrayList<Item> listOfItems = new ArrayList<>();
 
     @Before
     public void before() {
@@ -39,6 +42,19 @@ public class DiscountsTest {
         shoppingBasket.addItem(item2);
         double beforeDiscount = shoppingBasket.getTotalValue();
         assertEquals(28.419999999999998, Discount.LoyaltyCardUsed(beforeDiscount,customer1));
+    }
+
+    @Test
+    public void bogofTest() {
+        shoppingBasket.addItem(item2);
+        shoppingBasket.addItem(item2);
+        shoppingBasket.addItem(item2);
+        listOfItems.add(item2);
+        listOfItems.add(item2);
+        listOfItems.add(item2);
+
+        double beforeDiscount = shoppingBasket.getTotalValue();
+        assertEquals(37.00, Discount.bogof(beforeDiscount,listOfItems));
     }
 
 }

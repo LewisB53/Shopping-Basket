@@ -1,11 +1,13 @@
 package com.codeclan.user.shoppingbasket;
 
+
+import java.util.ArrayList;
+
 /**
  * Created by user on 11/06/2017.
  */
 
 class Discount {
-
 
     public static double overTwentyPoundsDiscount(double beforeDiscount) {
         if (beforeDiscount > 20.00)
@@ -21,5 +23,16 @@ class Discount {
             return discountedPrice;
         }
         else return beforeDiscount;
+    }
+
+    public static double bogof(double beforeDiscount,ArrayList listOfItems) {
+
+        int freeItems= listOfItems.size() / 2;
+        Math.floor(freeItems);
+        int chargable = listOfItems.size() - freeItems;
+
+        double discountedPrice = beforeDiscount / listOfItems.size() * chargable ;
+        return discountedPrice;
+
     }
 }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 
 class ShoppingBasket {
-    private ArrayList<Item> listOfItems = new ArrayList<>();
+    public ArrayList<Item> listOfItems = new ArrayList<>();
 
 
     public int countItems() {
