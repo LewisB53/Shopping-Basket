@@ -27,4 +27,12 @@ class ShoppingBasket {
         this.listOfItems.clear();
     }
 
+    public double getTotalValue() {
+        double totalValue = 0;
+            for (Item item : this.listOfItems)
+
+                totalValue += item.getValue();
+        return totalValue;
+    }
+
 }

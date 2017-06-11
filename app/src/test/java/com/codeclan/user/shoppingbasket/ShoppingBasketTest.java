@@ -14,11 +14,14 @@ public class ShoppingBasketTest {
 
     ShoppingBasket shoppingBasket;
     Item item1;
+    Item item2;
 
     @Before
     public void before() {
         shoppingBasket = new ShoppingBasket();
         item1 = new Item(10.50);
+        item2 = new Item(18.50);
+
     }
 
     @Test
@@ -46,6 +49,12 @@ public class ShoppingBasketTest {
         assertEquals(0, shoppingBasket.countItems());
     }
 
+    @Test
+    public void cangetTotalValueTest() {
+        shoppingBasket.addItem(item1);
+        shoppingBasket.addItem(item2);
+        assertEquals(29.00, shoppingBasket.getTotalValue());
+    }
 
 
 }
